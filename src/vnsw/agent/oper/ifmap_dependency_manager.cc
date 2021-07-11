@@ -654,6 +654,9 @@ void IFMapDependencyManager::InitializeDependencyRules(Agent *agent) {
     AddDependencyPath("virtual-network",
                       MakePath("virtual-network-multicast-policy",
                                "multicast-policy", true));
+    AddDependencyPath("virtual-network",
+                      MakePath("project-virtual-network",
+                               "project", true));
     RegisterConfigHandler(this, "virtual-network",
                           agent ? agent->vn_table() : NULL);
 
